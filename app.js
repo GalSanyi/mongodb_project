@@ -1,2 +1,11 @@
 //RhqZXfgYEYkO2tBC
-//mongodb+srv://Sanyi:RhqZXfgYEYkO2tBC@cluster0.xz1kjlo.mongodb.net/test
+const mongoose = require('mongoose');
+
+
+
+mongoose.connect(DB_HOST)
+.then(()=> console.log('Database connect'))
+.catch(error => {
+    console.log(error.message);
+    process.exit(1);
+});
